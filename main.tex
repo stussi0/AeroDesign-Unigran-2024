@@ -1,0 +1,60 @@
+\documentclass[oneside,12pt,a4paper]{report}
+\usepackage{graphicx} % Required for inserting images
+
+% INFORMACAO DA EQUIPE
+
+\title{AeroDesign}
+\author{Luis Alberto Schwind Pedroso Stussi da Silva Pereira}
+\date{August 2024}
+
+\begin{document}
+
+\pagestyle{plain}
+\maketitle
+
+\tableofcontents
+
+%\listoftables
+%\addcontentsline{toc}{chapter}{Lista de Tabelas}
+
+%\listoffigures
+%\addcontentsline{toc}{chapter}{Lista de Figuras}
+
+% LISTA DE SIMBOLOS
+\include{sec/simbolos}
+\clearpage
+
+
+% LISTA DE INPUTS
+\include{sec/inputs}
+
+
+% TEXTO TECNICO
+\include{sec/documento}
+
+% O texto tecnico pode ser divido em varios arquivos .tex para facilitar a organizacao e trabalho colaborativo
+% Exemplo:
+\include{sec/introducao}
+\section{Introdução}
+
+O aero design é muito legal. Eu fiz muitos amigos fazendo projetos! \cite{çengel2015mecânica}
+
+\include{sec/teoria}
+\include{sec/metodologia}
+\include{sec/resultados}
+\include{sec/conclusao}
+
+
+% LISTA DE OUTPUTS
+\include{sec/outputs}
+
+
+% BIBLIOGRAFIA
+\hyphenpenalty=10000 % turn off hyphenization
+\bibliography{referencias}
+\addcontentsline{toc}{chapter}{Referências Bibliográficas}
+
+% APENDICE
+% \include{sec/apendice}
+
+\end{document}
